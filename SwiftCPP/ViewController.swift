@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Swift picks up our C++ functions that are made available
+        // in SwiftCPP-Bridging-Header.h
+        let n = timesTwo(2.0)
+        println(n)
+        
     }
 
     override func didReceiveMemoryWarning() {
